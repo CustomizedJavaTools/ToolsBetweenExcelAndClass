@@ -1,16 +1,17 @@
 # ToolsBetweenExcelAndClass
 For converting excel to class or the other way around.
+
 Example:
 
 1. Class file
-	
-	//mapping between class and excel
-	public class ExampleDTO {
-		@ExcelColumn(column="A",maxLength=50,required=true,header="Test Column 1")
-		public String TestCol1;
-		@ExcelColumn(column="B",maxLength=100,required=true,header="Test Column 2")
-		public String TestCol2;
-	}
+
+		//mapping between class and excel
+		public class ExampleDTO{
+			@ExcelColumn(column="A",maxLength=50,required=true,header="Test Column 1")
+			public String TestCol1;
+			@ExcelColumn(column="B",maxLength=100,required=true,header="Test Column 2")
+			public String TestCol2;
+		}
 
 2.From excel to class:
 
