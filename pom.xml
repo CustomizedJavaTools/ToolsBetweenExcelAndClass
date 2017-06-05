@@ -2,39 +2,58 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.herman</groupId>
-	<artifactId>excel2class</artifactId>
-	<packaging>jar</packaging>
+	<artifactId>toolsBetweenExcelAndClass</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>excel 2 class/name>
+	<packaging>jar</packaging>
+
+	<name>toolsBetweenExcelAndClass</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
+		<jsp-api.version>2.1</jsp-api.version>
+		<jstl.version>1.2</jstl.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jxls-core.version>1.0.2</jxls-core.version>
-    <commons-jexl.version>1.1</commons-jexl.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- Excel -->
 		<dependency>
 			<groupId>net.sf.jxls</groupId>
 			<artifactId>jxls-core</artifactId>
 			<version>${jxls-core.version}</version>
 		</dependency>
+
+		<!-- Apache lang -->
 		<dependency>
-			<groupId>net.sf.jxls</groupId>
-			<artifactId>jxls-reader</artifactId>
-			<version>1.0.2</version>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
 		</dependency>
-    
+
+		<!-- Servlet -->
 		<dependency>
-			<groupId>commons-jexl</groupId>
-			<artifactId>commons-jexl</artifactId>
-			<version>${commons-jexl.version}</version>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+
+		<!-- Spring servlet -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.1.4.RELEASE</version>
 		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>excel2class</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
